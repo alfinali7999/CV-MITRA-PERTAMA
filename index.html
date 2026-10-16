@@ -4,21 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
     <title>Jasa Kontraktor Sipil, Interior, Sumur Bor Serdang Bedagai & Medan - CV Mitra Pertama</title>
     <meta name="description" content="CV Mitra Pertama adalah kontraktor sipil & interior tepercaya di Medan & Serdang Bedagai. Spesialis konstruksi jalan, jembatan, sumur bor dalam, irigasi, dan desain interior instansi/komersial dengan legalitas resmi.">
     <meta name="keywords" content="Kontraktor Medan, Kontraktor Serdang Bedagai, Jasa Sumur Bor Medan, Konstruksi Jalan, Irigasi Sungai, Interior Komersial, CV Mitra Pertama">
     <meta name="author" content="CV Mitra Pertama">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Jasa Kontraktor Sipil, Interior, Sumur Bor Serdang Bedagai & Medan - CV Mitra Pertama">
-    <meta property="og:description" content="Kontraktor sipil & interior tepercaya di Medan & Serdang Bedagai. Spesialis konstruksi jalan, jembatan, dan sumur bor dalam.">
 
-    <!-- Stylesheets -->
     <style>
-        /* CSS Variables */
         :root {
             --primary-blue: #0a3d7a;
             --secondary-blue: #1565c0;
@@ -30,7 +22,6 @@
             --bg-gray: #555555;
         }
 
-        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -59,7 +50,7 @@
             padding: 0 15px;
         }
 
-        /* --- HEADER --- */
+        /* HEADER */
         header {
             background-color: var(--bg-white);
             position: sticky;
@@ -95,7 +86,7 @@
 
         .contact-info a:hover { color: var(--accent-gold); }
 
-        /* --- TEKS BERJALAN (MARQUEE) --- */
+        /* MARQUEE */
         .marquee-container {
             background-color: var(--primary-blue);
             color: var(--text-light);
@@ -105,7 +96,6 @@
             overflow: hidden;
             white-space: nowrap;
             width: 100%;
-            position: relative;
         }
 
         .marquee-content {
@@ -114,16 +104,14 @@
             padding-left: 100%;
         }
 
-        .marquee-content span {
-            padding: 0 50px;
-        }
+        .marquee-content span { padding: 0 50px; }
 
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-100%); }
         }
 
-        /* --- NAVIGASI --- */
+        /* NAV */
         .main-nav {
             width: 100%;
             background-color: var(--accent-gold);
@@ -140,7 +128,7 @@
         }
 
         .main-nav ul li a {
-            color: var(--text-light); 
+            color: var(--text-light);
             font-weight: 700;
             font-size: 13px;
             text-transform: uppercase;
@@ -149,7 +137,6 @@
 
         .main-nav ul li a:hover { color: var(--primary-blue); }
 
-        /* --- TOMBOL HAMBURGER --- */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -157,7 +144,6 @@
             gap: 5px;
             padding: 12px 15px;
             background-color: var(--primary-blue);
-            border-radius: 0;
             width: 100%;
             align-items: flex-start;
         }
@@ -166,10 +152,9 @@
             width: 25px;
             height: 3px;
             background-color: var(--text-light);
-            transition: 0.3s;
         }
 
-        /* --- BANNER HERO --- */
+        /* HERO */
         .hero-banner {
             background: linear-gradient(rgba(10, 61, 122, 0.8), rgba(21, 101, 192, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1500') center/cover;
             color: var(--text-light);
@@ -215,7 +200,7 @@
             transform: translateY(-3px);
         }
 
-        /* --- LAYANAN SECTION --- */
+        /* SECTION TITLE */
         .section-title {
             text-align: center;
             padding: 50px 0 30px;
@@ -240,47 +225,59 @@
             left: 20%;
         }
 
+        /* SERVICES GRID */
+        .services-section { padding: 0 0 30px; }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             padding-bottom: 50px;
         }
 
         .service-card {
-    position: relative;
-    height: 250px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    background-color: #ddd;
-    display: block;           /* ← TAMBAHAN: Agar <a> berperilaku seperti <div> */
-    text-decoration: none;    /* ← TAMBAHAN: Hilangkan garis bawah */
-    color: inherit;           /* ← TAMBAHAN: Warisi warna teks */
-}
+            position: relative;
+            display: block;
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ddd;
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .service-card:hover { transform: translateY(-5px); }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
 
         .service-card::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(10, 61, 122, 0.7), rgba(21, 101, 192, 0.8));
+            background: linear-gradient(to bottom, rgba(10, 61, 122, 0.7), rgba(21, 101, 192, 0.85));
             transition: background 0.3s ease;
             z-index: 1;
         }
 
         .service-card:hover::before {
-            background: linear-gradient(to bottom, rgba(10, 61, 122, 0.8), rgba(212, 175, 55, 0.8));
+            background: linear-gradient(to bottom, rgba(10, 61, 122, 0.8), rgba(212, 175, 55, 0.85));
         }
 
         .service-card .bg-img {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             object-fit: cover;
             z-index: 0;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .bg-img {
+            transform: scale(1.08);
         }
 
         .service-content {
@@ -298,9 +295,10 @@
             color: var(--text-light);
             font-size: 22px;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            line-height: 1.3;
         }
 
-        /* --- GALERI TESTIMONI --- */
+        /* GALERI */
         .gallery-section {
             padding: 50px 0;
             background-color: var(--bg-white);
@@ -316,45 +314,14 @@
             user-select: none;
         }
 
-        .gallery-slider-container:active {
-            cursor: grabbing;
-        }
-
-        .gallery-slider-container::before,
-        .gallery-slider-container::after {
-            content: '';
-            position: absolute;
-            top: 0; bottom: 0;
-            width: 50px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .gallery-slider-container::before {
-            left: 0;
-            background: linear-gradient(to right, var(--bg-white), transparent);
-        }
-
-        .gallery-slider-container::after {
-            right: 0;
-            background: linear-gradient(to left, var(--bg-white), transparent);
-        }
-
         .gallery-track {
             display: flex;
             gap: 20px;
             width: max-content;
             animation: scrollGallery 40s linear infinite;
-            will-change: transform;
         }
 
-        .gallery-track:not(.dragging) {
-            animation-play-state: running;
-        }
-
-        .gallery-track.dragging {
-            animation-play-state: paused;
-        }
+        .gallery-track:hover { animation-play-state: paused; }
 
         @keyframes scrollGallery {
             0% { transform: translateX(0); }
@@ -370,11 +337,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             cursor: pointer;
             background-color: #eee;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .gallery-item img {
@@ -383,11 +345,6 @@
             object-fit: cover;
             display: block;
             pointer-events: none;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
         }
 
         .gallery-detail {
@@ -413,10 +370,9 @@
         .gallery-detail p {
             font-size: 13px;
             font-style: italic;
-            line-height: 1.4;
         }
 
-        /* --- SECTION PARTNERSHIP --- */
+        /* PARTNERSHIP */
         .partnership-section {
             padding: 60px 0;
             background-color: var(--bg-light);
@@ -428,28 +384,7 @@
         .partners-slider-container {
             width: 100%;
             overflow: hidden;
-            position: relative;
             padding: 20px 0;
-        }
-
-        .partners-slider-container::before,
-        .partners-slider-container::after {
-            content: '';
-            position: absolute;
-            top: 0; bottom: 0;
-            width: 50px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .partners-slider-container::before {
-            left: 0;
-            background: linear-gradient(to right, var(--bg-light), transparent);
-        }
-
-        .partners-slider-container::after {
-            right: 0;
-            background: linear-gradient(to left, var(--bg-light), transparent);
         }
 
         .partners-track {
@@ -460,9 +395,7 @@
             align-items: center;
         }
 
-        .partners-track:hover {
-            animation-play-state: paused;
-        }
+        .partners-track:hover { animation-play-state: paused; }
 
         @keyframes scrollPartners {
             0% { transform: translateX(0); }
@@ -471,7 +404,6 @@
 
         .partners-track img {
             height: 120px;
-            width: auto;
             max-width: 260px;
             background-color: white;
             padding: 15px 25px;
@@ -479,50 +411,21 @@
             object-fit: contain;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
             flex-shrink: 0;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .partners-track img:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.18);
-        }
-
-        /* --- SECTION ULASAN GOOGLE --- */
+        /* REVIEWS */
         .reviews-section {
             padding: 50px 0;
             background-color: #061f3d;
             overflow: hidden;
         }
 
-        .reviews-section .section-title h2 {
-            color: var(--text-light);
-        }
+        .reviews-section .section-title h2 { color: var(--text-light); }
 
         .review-slider-container {
             width: 100%;
             overflow: hidden;
-            position: relative;
             padding: 10px 0;
-        }
-
-        .review-slider-container::before,
-        .review-slider-container::after {
-            content: '';
-            position: absolute;
-            top: 0; bottom: 0;
-            width: 50px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .review-slider-container::before {
-            left: 0;
-            background: linear-gradient(to right, #061f3d, transparent);
-        }
-
-        .review-slider-container::after {
-            right: 0;
-            background: linear-gradient(to left, #061f3d, transparent);
         }
 
         .review-track {
@@ -532,9 +435,7 @@
             animation: scrollLeft 40s linear infinite;
         }
 
-        .review-track:hover {
-            animation-play-state: paused;
-        }
+        .review-track:hover { animation-play-state: paused; }
 
         @keyframes scrollLeft {
             0% { transform: translateX(0); }
@@ -569,19 +470,13 @@
 
         .review-header strong { font-size: 14px; }
         .stars { color: #f1c40f; font-size: 14px; }
-        .review-text { font-style: italic; font-size: 13px; line-height: 1.4; }
+        .review-text { font-style: italic; font-size: 13px; }
 
-        /* --- FOOTER --- */
+        /* FOOTER */
         footer {
             background-color: #04152b;
             color: var(--text-light);
-            padding-top: 30px;
-        }
-
-        .footer-bottom {
             padding: 30px 0;
-            font-size: 14px;
-            color: #ccc;
         }
 
         .footer-bottom-grid {
@@ -597,16 +492,15 @@
             margin-bottom: 10px;
         }
 
-        .address-info p { margin-bottom: 5px; }
+        .address-info p {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #ccc;
+        }
 
         .address-info a {
             color: var(--accent-gold);
             font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .address-info a:hover {
-            color: var(--text-light);
         }
 
         .map-container {
@@ -617,11 +511,7 @@
             border: 2px solid rgba(212, 175, 55, 0.5);
         }
 
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
 
         .copyright {
             text-align: center;
@@ -629,124 +519,59 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 13px;
+            color: #aaa;
         }
 
-        /* --- RESPONSIVE DESIGN --- */
-        @media (max-width: 900px) {
-            .footer-bottom-grid { grid-template-columns: 1fr; text-align: center; }
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
-            .top-bar {
-                flex-direction: column;
-                gap: 0;
-                padding: 0;
-                border-bottom: none;
-                background-color: var(--accent-gold); 
-            }
-
-            .logo {
-                padding: 15px;
-                background-color: var(--bg-white); 
-                width: 100%;
-                text-align: center;
-                border-bottom: none; 
-            }
-
+            .top-bar { flex-direction: column; gap: 0; padding: 0; background-color: var(--accent-gold); }
+            .logo { padding: 15px; background-color: var(--bg-white); width: 100%; text-align: center; }
             .contact-info {
-                display: flex;
-                flex-direction: row; 
-                justify-content: space-between; 
-                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
                 padding: 8px 15px;
                 width: 100%;
                 font-size: 12px;
                 color: var(--primary-blue);
-                background-color: var(--accent-gold); 
-                border-bottom: none;
+                background-color: var(--accent-gold);
             }
-
             .contact-info a:nth-child(1) { order: 2; }
             .contact-info a:nth-child(2) { order: 1; }
-
-            .marquee-container {
-                background-color: var(--primary-blue);
-                padding: 5px 0;
-                font-size: 11px;
-            }
-
-            .menu-toggle { 
-                display: flex; 
-                margin: 0; 
-                background-color: var(--primary-blue); 
-                border-radius: 0;
-                width: 100%;
-                align-items: flex-start;
-                padding: 12px 15px;
-            }
-            .menu-toggle span { background-color: var(--text-light); }
-            
-            .main-nav { 
-                display: none; 
-                width: 100%; 
-                background-color: var(--bg-gray);
-            }
+            .menu-toggle { display: flex; }
+            .main-nav { display: none; background-color: var(--bg-gray); }
             .main-nav.active { display: block; }
-            
             .main-nav ul { flex-direction: column; gap: 0; padding: 0; }
-            .main-nav ul li { 
-                text-align: center; 
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                width: 100%;
-            }
-            .main-nav ul li a { 
-                display: block; 
-                padding: 15px; 
-                color: var(--text-light);
-            }
+            .main-nav ul li { text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+            .main-nav ul li a { display: block; padding: 15px; color: var(--text-light); }
 
             .hero-content h1 { font-size: 28px; }
             .hero-content p { font-size: 16px; }
             .services-grid { grid-template-columns: 1fr; }
             .gallery-item { width: 240px; }
             .gallery-item img { height: 180px; }
-            
             .google-review { width: 260px; }
-            .review-track { gap: 15px; }
-            
-            .partners-track {
-                gap: 25px;
-                animation-duration: 25s;
-            }
-            .partners-track img {
-                height: 90px;
-                max-width: 180px;
-                padding: 12px 18px;
-            }
+            .partners-track img { height: 90px; max-width: 180px; padding: 12px 18px; }
+            .footer-bottom-grid { grid-template-columns: 1fr; text-align: center; }
         }
 
         @media (max-width: 480px) {
             .google-review { width: 240px; }
             .gallery-item { width: 220px; }
             .gallery-item img { height: 160px; }
-            
-            .partners-track {
-                gap: 20px;
-            }
-            .partners-track img {
-                height: 75px;
-                max-width: 150px;
-                padding: 10px 15px;
-            }
+            .partners-track img { height: 75px; max-width: 150px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <div class="container top-bar">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="https://cvmitrapertama.vercel.app/logo-cvmitrapertama.png" alt="Logo CV Mitra Pertama" onerror="this.src='https://placehold.co/200x50/ffffff/0a3d7a?text=CV.+MITRA+PERTAMA'">
             </a>
             <div class="contact-info">
@@ -755,7 +580,6 @@
             </div>
         </div>
 
-        <!-- Teks Berjalan (Marquee) -->
         <div class="marquee-container">
             <div class="marquee-content">
                 <span>Selamat Datang di CV Mitra Pertama - Kontraktor Sipil & Interior Tepercaya di Medan & Serdang Bedagai. Hubungi kami untuk konsultasi gratis!</span>
@@ -763,14 +587,10 @@
             </div>
         </div>
 
-        <!-- Tombol Hamburger -->
         <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
 
-        <!-- Navigasi Utama -->
         <nav class="main-nav" id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -784,7 +604,7 @@
         </nav>
     </header>
 
-    <!-- Banner Hero -->
+    <!-- HERO -->
     <section class="hero-banner">
         <div class="container hero-content">
             <h1>Kontraktor Sipil & Interior <span>Tepercaya</span> di Medan & Serdang Bedagai</h1>
@@ -793,170 +613,126 @@
         </div>
     </section>
 
-    <!-- Layanan Section -->
+    <!-- LAYANAN -->
     <section class="services-section">
         <div class="container">
             <div class="section-title">
                 <h2>Layanan Kami</h2>
             </div>
             <div class="services-grid">
-                
+
                 <a href="layanan/desain-perencanaan.html" class="service-card">
                     <img class="bg-img" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=500" alt="Desain & Perencanaan">
                     <div class="service-content"><h3>Desain &<br>Perencanaan</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/konstruksi-beton.html" class="service-card">
                     <img class="bg-img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=500" alt="Konstruksi Struktur Beton">
                     <div class="service-content"><h3>Konstruksi<br>Struktur Beton</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/konstruksi-fasad.html" class="service-card">
                     <img class="bg-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=500" alt="Konstruksi Fasad Bangunan">
                     <div class="service-content"><h3>Konstruksi Fasad<br>Bangunan</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/renovasi-restorasi.html" class="service-card">
                     <img class="bg-img" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=500" alt="Renovasi & Restorasi">
                     <div class="service-content"><h3>Renovasi &<br>Restorasi</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/konstruksi-baja.html" class="service-card">
                     <img class="bg-img" src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=500" alt="Konstruksi Struktur Baja">
                     <div class="service-content"><h3>Konstruksi<br>Struktur Baja</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/infrastruktur-jalan.html" class="service-card">
                     <img class="bg-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1lDS5YzBRNWcNyp1wlaLzsBjRgYu_QY4_LrfWp3sCEv1dejCGSTD48-c&s=10" alt="Infrastruktur Jalan & Jembatan">
                     <div class="service-content"><h3>Infrastruktur<br>Jalan &<br>Jembatan</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/interior-furniture.html" class="service-card">
                     <img class="bg-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=500" alt="Interior & Furniture">
                     <div class="service-content"><h3>Interior &<br>Furniture</h3></div>
-                </div>
+                </a>
 
-                <!-- Sumur Bor Rumahan & Dalam -->
                 <a href="layanan/sumur-bor.html" class="service-card">
                     <img class="bg-img" src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/11/17/d1f6adc3-310f-4ab2-9b55-a0e6a9386251.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg" alt="Sumur Bor Rumahan & Dalam">
                     <div class="service-content"><h3>Sumur Bor<br>Rumahan &<br>Dalam</h3></div>
-                </div>
+                </a>
 
-                <!-- Irigasi & Normalisasi Sungai - GAMBAR BARU -->
                 <a href="layanan/irigasi-sungai.html" class="service-card">
                     <img class="bg-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzcFwqLWCRpDkkru4otkVFP4yMH6e00d_OWYj6mNOVHfAy8WLquSQqbssO&s=10" alt="Irigasi & Normalisasi Sungai">
                     <div class="service-content"><h3>Irigasi &<br>Normalisasi<br>Sungai</h3></div>
-                </div>
+                </a>
 
-                <!-- Kolam Renang & SPA Pool - GAMBAR BARU -->
                 <a href="layanan/kolam-renang.html" class="service-card">
                     <img class="bg-img" src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/288/2023/01/20014126/fairmont-jakarta-offers-wonderful-indonesia.jpg" alt="Kolam Renang & SPA Pool">
                     <div class="service-content"><h3>Kolam Renang &<br>SPA Pool</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/cut-fill.html" class="service-card">
                     <img class="bg-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=500" alt="Cut & Fill Alat Berat">
                     <div class="service-content"><h3>Cut & Fill Alat<br>Berat</h3></div>
-                </div>
+                </a>
 
                 <a href="layanan/pengadaan-material.html" class="service-card">
                     <img class="bg-img" src="https://blog.solusiklik.id/wp-content/uploads/2026/06/material-infrastruktur-1024x576.webp" alt="Pengadaan Material">
                     <div class="service-content"><h3>Pengadaan<br>Material</h3></div>
-                </div>
+                </a>
 
             </div>
         </div>
     </section>
 
-    <!-- GALERI TESTIMONI -->
+    <!-- GALERI -->
     <section class="gallery-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Galeri Proyek & Testimoni</h2>
-            </div>
+            <div class="section-title"><h2>Galeri Proyek & Testimoni</h2></div>
         </div>
-        
         <div class="gallery-slider-container" id="gallerySlider">
             <div class="gallery-track" id="galleryTrack">
-                
                 <div class="gallery-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1lDS5YzBRNWcNyp1wlaLzsBjRgYu_QY4_LrfWp3sCEv1dejCGSTD48-c&s=10" alt="Proyek Konstruksi Jalan">
-                    <div class="gallery-detail">
-                        <h4>Konstruksi Jalan Toll</h4>
-                        <p>"Pengerjaan sangat cepat dan presisi. Kualitas aspal terbaik." - PT. Jaya Abadi</p>
-                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1lDS5YzBRNWcNyp1wlaLzsBjRgYu_QY4_LrfWp3sCEv1dejCGSTD48-c&s=10" alt="Proyek Jalan">
+                    <div class="gallery-detail"><h4>Konstruksi Jalan Toll</h4><p>"Pengerjaan cepat dan presisi." - PT. Jaya Abadi</p></div>
                 </div>
-
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=500" alt="Renovasi Gedung Kantor">
-                    <div class="gallery-detail">
-                        <h4>Renovasi Gedung Kantor</h4>
-                        <p>"Hasil renovasi sangat memuaskan, kantor jadi lebih modern." - Bank Sumut</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=500" alt="Renovasi Kantor">
+                    <div class="gallery-detail"><h4>Renovasi Gedung Kantor</h4><p>"Hasil renovasi memuaskan." - Bank Sumut</p></div>
                 </div>
-
-                <!-- Kolam Renang - GAMBAR BARU -->
                 <div class="gallery-item">
-                    <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/288/2023/01/20014126/fairmont-jakarta-offers-wonderful-indonesia.jpg" alt="Pembuatan Kolam Renang">
-                    <div class="gallery-detail">
-                        <h4>Kolam Renang Hotel</h4>
-                        <p>"Desain kolam renang sangat estetik dan sistem filtrasinya bagus." - Hotel Grand Medan</p>
-                    </div>
+                    <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/288/2023/01/20014126/fairmont-jakarta-offers-wonderful-indonesia.jpg" alt="Kolam Renang">
+                    <div class="gallery-detail"><h4>Kolam Renang Hotel</h4><p>"Desain estetik dan filtrasi bagus." - Hotel Grand Medan</p></div>
                 </div>
-
                 <div class="gallery-item">
-                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/11/17/d1f6adc3-310f-4ab2-9b55-a0e6a9386251.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg" alt="Sumur Bor Dalam">
-                    <div class="gallery-detail">
-                        <h4>Sumur Bor Industri</h4>
-                        <p>"Air melimpah dan proses pengeboran sangat profesional." - Pabrik Kelapa Sawit</p>
-                    </div>
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/11/17/d1f6adc3-310f-4ab2-9b55-a0e6a9386251.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg" alt="Sumur Bor">
+                    <div class="gallery-detail"><h4>Sumur Bor Industri</h4><p>"Air melimpah dan profesional." - Pabrik Kelapa Sawit</p></div>
                 </div>
-
-                <!-- Duplikasi untuk Looping -->
                 <div class="gallery-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1lDS5YzBRNWcNyp1wlaLzsBjRgYu_QY4_LrfWp3sCEv1dejCGSTD48-c&s=10" alt="Proyek Konstruksi Jalan">
-                    <div class="gallery-detail">
-                        <h4>Konstruksi Jalan Toll</h4>
-                        <p>"Pengerjaan sangat cepat dan presisi. Kualitas aspal terbaik." - PT. Jaya Abadi</p>
-                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1lDS5YzBRNWcNyp1wlaLzsBjRgYu_QY4_LrfWp3sCEv1dejCGSTD48-c&s=10" alt="Proyek Jalan">
+                    <div class="gallery-detail"><h4>Konstruksi Jalan Toll</h4><p>"Pengerjaan cepat dan presisi." - PT. Jaya Abadi</p></div>
                 </div>
-
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=500" alt="Renovasi Gedung Kantor">
-                    <div class="gallery-detail">
-                        <h4>Renovasi Gedung Kantor</h4>
-                        <p>"Hasil renovasi sangat memuaskan, kantor jadi lebih modern." - Bank Sumut</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=500" alt="Renovasi Kantor">
+                    <div class="gallery-detail"><h4>Renovasi Gedung Kantor</h4><p>"Hasil renovasi memuaskan." - Bank Sumut</p></div>
                 </div>
-
                 <div class="gallery-item">
-                    <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/288/2023/01/20014126/fairmont-jakarta-offers-wonderful-indonesia.jpg" alt="Pembuatan Kolam Renang">
-                    <div class="gallery-detail">
-                        <h4>Kolam Renang Hotel</h4>
-                        <p>"Desain kolam renang sangat estetik dan sistem filtrasinya bagus." - Hotel Grand Medan</p>
-                    </div>
+                    <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/288/2023/01/20014126/fairmont-jakarta-offers-wonderful-indonesia.jpg" alt="Kolam Renang">
+                    <div class="gallery-detail"><h4>Kolam Renang Hotel</h4><p>"Desain estetik dan filtrasi bagus." - Hotel Grand Medan</p></div>
                 </div>
-
                 <div class="gallery-item">
-                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/11/17/d1f6adc3-310f-4ab2-9b55-a0e6a9386251.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg" alt="Sumur Bor Dalam">
-                    <div class="gallery-detail">
-                        <h4>Sumur Bor Industri</h4>
-                        <p>"Air melimpah dan proses pengeboran sangat profesional." - Pabrik Kelapa Sawit</p>
-                    </div>
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/11/17/d1f6adc3-310f-4ab2-9b55-a0e6a9386251.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg" alt="Sumur Bor">
+                    <div class="gallery-detail"><h4>Sumur Bor Industri</h4><p>"Air melimpah dan profesional." - Pabrik Kelapa Sawit</p></div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- SECTION PARTNERSHIP -->
+    <!-- PARTNERSHIP -->
     <section class="partnership-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Partnership</h2>
-            </div>
+            <div class="section-title"><h2>Partnership</h2></div>
         </div>
-        
         <div class="partners-slider-container">
             <div class="partners-track">
                 <img src="https://cvmitrapertama.vercel.app/partnership1.jpg" alt="Partner 1">
@@ -964,7 +740,6 @@
                 <img src="https://cvmitrapertama.vercel.app/partnership3.jpg" alt="Partner 3">
                 <img src="https://cvmitrapertama.vercel.app/partnership4.jpg" alt="Partner 4">
                 <img src="https://cvmitrapertama.vercel.app/pt-bw.png" alt="PT BW">
-                
                 <img src="https://cvmitrapertama.vercel.app/partnership1.jpg" alt="Partner 1">
                 <img src="https://cvmitrapertama.vercel.app/partnership2.jpg" alt="Partner 2">
                 <img src="https://cvmitrapertama.vercel.app/partnership3.jpg" alt="Partner 3">
@@ -974,204 +749,53 @@
         </div>
     </section>
 
-    <!-- SECTION ULASAN GOOGLE -->
+    <!-- REVIEWS -->
     <section class="reviews-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Ulasan Google</h2>
-            </div>
+            <div class="section-title"><h2>Ulasan Google</h2></div>
         </div>
-        
         <div class="review-slider-container">
             <div class="review-track">
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=B" alt="Budi">
-                        <div><strong>Budi Santoso</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Pengerjaan sumur bor di Serdang Bedagai sangat cepat dan rapi. Tim profesional!"</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/1565c0/ffffff?text=S" alt="Siti">
-                        <div><strong>Siti Aminah</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Desain interior kantor kami jadi sangat modern. Hasilnya melebihi ekspektasi."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/d4af37/ffffff?text=A" alt="Andi">
-                        <div><strong>Andi Wijaya</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Konstruksi jalan di proyek kami selesai tepat waktu. Kualitas beton sangat bagus."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=R" alt="Rina">
-                        <div><strong>Rina Marlina</strong><div class="stars">★★★★☆</div></div>
-                    </div>
-                    <p class="review-text">"Pelayanan ramah, respon cepat. Harga kompetitif untuk ukuran kontraktor Medan."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/1565c0/ffffff?text=D" alt="Dedi">
-                        <div><strong>Dedi Kurniawan</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Renovasi rumah saya dikerjakan dengan sangat detail. Tidak ada kendala berarti."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/d4af37/ffffff?text=F" alt="Fitri">
-                        <div><strong>Fitri Handayani</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Sangat puas dengan hasil kolam renangnya. Anak-anak senang sekali. Terima kasih!"</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=H" alt="Hendra">
-                        <div><strong>Hendra Gunawan</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Pengadaan materialnya lengkap dan pengiriman ke lokasi proyek sangat cepat."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/1565c0/ffffff?text=M" alt="Maya">
-                        <div><strong>Maya Sari</strong><div class="stars">★★★★☆</div></div>
-                    </div>
-                    <p class="review-text">"Struktur baja untuk gudang kami kokoh dan presisi. Pengerjaan rapi."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/d4af37/ffffff?text=E" alt="Eko">
-                        <div><strong>Eko Prasetyo</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Jasa cut and fill untuk lahan perkebunan kami sangat memuaskan. Alat berat siap."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=L" alt="Lina">
-                        <div><strong>Lina Kusuma</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Konsultasi desainnya sangat membantu. Kami jadi tahu material terbaik untuk budget kami."</p>
-                </div>
-                
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=B" alt="Budi">
-                        <div><strong>Budi Santoso</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Pengerjaan sumur bor di Serdang Bedagai sangat cepat dan rapi. Tim profesional!"</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/1565c0/ffffff?text=S" alt="Siti">
-                        <div><strong>Siti Aminah</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Desain interior kantor kami jadi sangat modern. Hasilnya melebihi ekspektasi."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/d4af37/ffffff?text=A" alt="Andi">
-                        <div><strong>Andi Wijaya</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Konstruksi jalan di proyek kami selesai tepat waktu. Kualitas beton sangat bagus."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=R" alt="Rina">
-                        <div><strong>Rina Marlina</strong><div class="stars">★★★★☆</div></div>
-                    </div>
-                    <p class="review-text">"Pelayanan ramah, respon cepat. Harga kompetitif untuk ukuran kontraktor Medan."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/1565c0/ffffff?text=D" alt="Dedi">
-                        <div><strong>Dedi Kurniawan</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Renovasi rumah saya dikerjakan dengan sangat detail. Tidak ada kendala berarti."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/d4af37/ffffff?text=F" alt="Fitri">
-                        <div><strong>Fitri Handayani</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Sangat puas dengan hasil kolam renangnya. Anak-anak senang sekali. Terima kasih!"</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=H" alt="Hendra">
-                        <div><strong>Hendra Gunawan</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Pengadaan materialnya lengkap dan pengiriman ke lokasi proyek sangat cepat."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/1565c0/ffffff?text=M" alt="Maya">
-                        <div><strong>Maya Sari</strong><div class="stars">★★★★☆</div></div>
-                    </div>
-                    <p class="review-text">"Struktur baja untuk gudang kami kokoh dan presisi. Pengerjaan rapi."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/d4af37/ffffff?text=E" alt="Eko">
-                        <div><strong>Eko Prasetyo</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Jasa cut and fill untuk lahan perkebunan kami sangat memuaskan. Alat berat siap."</p>
-                </div>
-                <div class="google-review">
-                    <div class="review-header">
-                        <img src="https://placehold.co/35x35/0a3d7a/ffffff?text=L" alt="Lina">
-                        <div><strong>Lina Kusuma</strong><div class="stars">★★★★★</div></div>
-                    </div>
-                    <p class="review-text">"Konsultasi desainnya sangat membantu. Kami jadi tahu material terbaik untuk budget kami."</p>
-                </div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/0a3d7a/ffffff?text=B" alt="Budi"><div><strong>Budi Santoso</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Pengerjaan sumur bor cepat dan rapi."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/1565c0/ffffff?text=S" alt="Siti"><div><strong>Siti Aminah</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Desain interior kantor sangat modern."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/d4af37/ffffff?text=A" alt="Andi"><div><strong>Andi Wijaya</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Konstruksi jalan selesai tepat waktu."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/0a3d7a/ffffff?text=R" alt="Rina"><div><strong>Rina Marlina</strong><div class="stars">★★★★☆</div></div></div><p class="review-text">"Pelayanan ramah, harga kompetitif."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/1565c0/ffffff?text=D" alt="Dedi"><div><strong>Dedi Kurniawan</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Renovasi rumah sangat detail."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/d4af37/ffffff?text=F" alt="Fitri"><div><strong>Fitri Handayani</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Kolam renangnya sangat memuaskan."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/0a3d7a/ffffff?text=B" alt="Budi"><div><strong>Budi Santoso</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Pengerjaan sumur bor cepat dan rapi."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/1565c0/ffffff?text=S" alt="Siti"><div><strong>Siti Aminah</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Desain interior kantor sangat modern."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/d4af37/ffffff?text=A" alt="Andi"><div><strong>Andi Wijaya</strong><div class="stars">★★★★★</div></div></div><p class="review-text">"Konstruksi jalan selesai tepat waktu."</p></div>
+                <div class="google-review"><div class="review-header"><img src="https://placehold.co/35x35/0a3d7a/ffffff?text=R" alt="Rina"><div><strong>Rina Marlina</strong><div class="stars">★★★★☆</div></div></div><p class="review-text">"Pelayanan ramah, harga kompetitif."</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer id="kontak">
-        <div class="footer-bottom">
-            <div class="container footer-bottom-grid">
-                <div class="address-info">
-                    <h4>Alamat Kantor Kami</h4>
-                    <p>Jl. Suka Air, Pematang Sijonam, Kec. Perbaungan,<br>Kabupaten Serdang Bedagai, Sumatera Utara 20986</p>
-                    <p style="margin-top: 10px;">
-                        <strong>Email:</strong> <a href="mailto:Mitrapertama03@gmail.com">Mitrapertama03@gmail.com</a>
-                    </p>
-                    <p>
-                        <strong>Telp/WA:</strong> <a href="tel:+6282160681229">+62 821-6068-1229</a>
-                    </p>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.087375461506!2d98.99044077481106!3d3.567364696406827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30314f002df5f37d%3A0x47e23904a764a6b8!2sDoaibu%20rental%20mobil%20perbaungan!5e0!3m2!1sid!2sid!4v1791874949947!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
+        <div class="container footer-bottom-grid">
+            <div class="address-info">
+                <h4>Alamat Kantor Kami</h4>
+                <p>Jl. Suka Air, Pematang Sijonam, Kec. Perbaungan,<br>Kabupaten Serdang Bedagai, Sumatera Utara 20986</p>
+                <p style="margin-top: 10px;"><strong>Email:</strong> <a href="mailto:Mitrapertama03@gmail.com">Mitrapertama03@gmail.com</a></p>
+                <p><strong>Telp/WA:</strong> <a href="tel:+6282160681229">+62 821-6068-1229</a></p>
             </div>
-            <div class="container copyright">
-                <p>&copy; 2026 CV Mitra Pertama. All Rights Reserved.</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.087375461506!2d98.99044077481106!3d3.567364696406827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30314f002df5f37d%3A0x47e23904a764a6b8!2sDoaibu%20rental%20mobil%20perbaungan!5e0!3m2!1sid!2sid!4v1791874949947!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
             </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 CV Mitra Pertama. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Mobile Menu
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navbar = document.getElementById('navbar');
-
-            mobileMenu.addEventListener('click', function() {
-                navbar.classList.toggle('active');
-            });
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('navbar').classList.toggle('active');
         });
 
-        // ============ GALERI DRAG & ACCORDION ============
         const slider = document.getElementById('gallerySlider');
         const track = document.getElementById('galleryTrack');
-        let isDown = false;
-        let startX = 0;
-        let scrollStart = 0;
-        let currentTranslate = 0;
+        let isDown = false, startX = 0, scrollStart = 0;
 
         function getCurrentTranslateX() {
             const style = window.getComputedStyle(track);
@@ -1183,17 +807,14 @@
             isDown = true;
             track.classList.add('dragging');
             startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-            currentTranslate = getCurrentTranslateX();
-            scrollStart = currentTranslate;
+            scrollStart = getCurrentTranslateX();
         }
 
         function handleDragMove(e) {
             if (!isDown) return;
             e.preventDefault();
             const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-            const walk = clientX - startX;
-            const newTranslate = scrollStart + walk;
-            track.style.transform = `translateX(${newTranslate}px)`;
+            track.style.transform = `translateX(${scrollStart + (clientX - startX)}px)`;
             track.style.animation = 'none';
         }
 
@@ -1201,58 +822,32 @@
             if (!isDown) return;
             isDown = false;
             track.classList.remove('dragging');
-            
-            setTimeout(() => {
-                track.style.transform = '';
-                track.style.animation = '';
-            }, 100);
+            setTimeout(() => { track.style.transform = ''; track.style.animation = ''; }, 100);
         }
 
         slider.addEventListener('mousedown', handleDragStart);
         slider.addEventListener('mousemove', handleDragMove);
         slider.addEventListener('mouseleave', handleDragEnd);
         slider.addEventListener('mouseup', handleDragEnd);
-
         slider.addEventListener('touchstart', handleDragStart, { passive: true });
         slider.addEventListener('touchmove', handleDragMove, { passive: false });
         slider.addEventListener('touchend', handleDragEnd);
 
-        let clickStartX = 0;
-        let clickStartY = 0;
-
-        slider.addEventListener('mousedown', (e) => {
-            clickStartX = e.clientX;
-            clickStartY = e.clientY;
-        });
-
-        slider.addEventListener('touchstart', (e) => {
-            clickStartX = e.touches[0].clientX;
-            clickStartY = e.touches[0].clientY;
-        }, { passive: true });
-
+        let clickStartX = 0, clickStartY = 0;
+        slider.addEventListener('mousedown', (e) => { clickStartX = e.clientX; clickStartY = e.clientY; });
+        slider.addEventListener('touchstart', (e) => { clickStartX = e.touches[0].clientX; clickStartY = e.touches[0].clientY; }, { passive: true });
         slider.addEventListener('click', (e) => {
-            const diffX = Math.abs(e.clientX - clickStartX);
-            const diffY = Math.abs(e.clientY - clickStartY);
-            
-            if (diffX < 10 && diffY < 10) {
-                const galleryItem = e.target.closest('.gallery-item');
-                if (galleryItem) {
-                    toggleGallery(galleryItem);
-                }
+            if (Math.abs(e.clientX - clickStartX) < 10 && Math.abs(e.clientY - clickStartY) < 10) {
+                const item = e.target.closest('.gallery-item');
+                if (item) toggleGallery(item);
             }
         });
 
         function toggleGallery(element) {
             const allItems = document.querySelectorAll('.gallery-item');
             const isActive = element.classList.contains('active');
-            
-            allItems.forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            if (!isActive) {
-                element.classList.add('active');
-            }
+            allItems.forEach(item => item.classList.remove('active'));
+            if (!isActive) element.classList.add('active');
         }
     </script>
 </body>
