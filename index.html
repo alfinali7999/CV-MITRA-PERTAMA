@@ -248,15 +248,18 @@
         }
 
         .service-card {
-            position: relative;
-            height: 250px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            background-color: #ddd;
-        }
+    position: relative;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #ddd;
+    display: block;           /* ← TAMBAHAN: Agar <a> berperilaku seperti <div> */
+    text-decoration: none;    /* ← TAMBAHAN: Hilangkan garis bawah */
+    color: inherit;           /* ← TAMBAHAN: Warisi warna teks */
+}
 
         .service-card:hover { transform: translateY(-5px); }
 
