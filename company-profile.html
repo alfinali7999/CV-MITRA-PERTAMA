@@ -49,44 +49,33 @@
         .menu-toggle span { width: 25px; height: 3px; background-color: var(--text-light); }
 
         /* PAGE HEADER */
-        .page-header { background: linear-gradient(rgba(10, 61, 122, 0.85), rgba(21, 101, 192, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1500') center/cover; color: var(--text-light); padding: 70px 20px; text-align: center; }
-        .page-header h1 { font-size: 38px; text-transform: uppercase; margin-bottom: 10px; }
+        .page-header { background: linear-gradient(rgba(10, 61, 122, 0.85), rgba(21, 101, 192, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1500') center/cover; color: var(--text-light); padding: 60px 20px; text-align: center; }
+        .page-header h1 { font-size: 36px; text-transform: uppercase; margin-bottom: 10px; }
         .page-header h1 span { color: var(--accent-gold); }
-        .page-header p { font-size: 16px; max-width: 800px; margin: 0 auto; }
+        .page-header p { font-size: 15px; max-width: 800px; margin: 0 auto; }
 
-        /* CONTENT */
-        .content-section { padding: 50px 0; }
-        .section-title { text-align: center; padding: 0 0 30px; }
-        .section-title h2 { font-size: 30px; color: var(--primary-blue); text-transform: uppercase; position: relative; display: inline-block; padding-bottom: 10px; }
-        .section-title h2::after { content: ''; position: absolute; width: 60%; height: 3px; background-color: var(--accent-gold); bottom: 0; left: 20%; }
+        /* PDF VIEWER SECTION */
+        .pdf-section { padding: 40px 0; background: var(--bg-light); }
+        .pdf-container { width: 100%; max-width: 1000px; margin: 0 auto; background: var(--bg-white); border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); overflow: hidden; }
+        .pdf-toolbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: var(--primary-blue); color: var(--text-light); flex-wrap: wrap; gap: 10px; }
+        .pdf-toolbar h3 { font-size: 16px; color: var(--accent-gold); }
+        .pdf-toolbar .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+        .pdf-toolbar a { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-gold); color: var(--primary-blue); padding: 8px 16px; border-radius: 5px; font-size: 13px; font-weight: bold; transition: background 0.3s; }
+        .pdf-toolbar a:hover { background: #f1c40f; }
+        .pdf-toolbar a.secondary { background: var(--bg-white); color: var(--primary-blue); }
+        .pdf-viewer { width: 100%; height: 85vh; min-height: 500px; border: none; display: block; background: #f0f0f0; }
+        .pdf-fallback { padding: 40px 20px; text-align: center; }
+        .pdf-fallback h3 { color: var(--primary-blue); margin-bottom: 15px; }
+        .pdf-fallback p { margin-bottom: 20px; color: #666; }
 
-        .profile-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; }
-        .profile-image img { width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-        .profile-text h3 { color: var(--primary-blue); font-size: 24px; margin-bottom: 15px; }
-        .profile-text p { margin-bottom: 12px; text-align: justify; }
+        /* INFO CARD */
+        .info-cards { max-width: 1000px; margin: 30px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        .info-card { background: var(--bg-white); padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 4px solid var(--accent-gold); }
+        .info-card h4 { color: var(--primary-blue); font-size: 14px; margin-bottom: 5px; }
+        .info-card p { font-size: 13px; color: #666; }
 
-        /* LEGALITAS CARD */
-        .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px; }
-        .legal-card { background: var(--bg-white); padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 4px solid var(--accent-gold); }
-        .legal-card h4 { color: var(--primary-blue); margin-bottom: 12px; font-size: 16px; display: flex; align-items: center; gap: 8px; }
-        .legal-card p { font-size: 13px; color: #555; margin-bottom: 5px; line-height: 1.6; }
-        .legal-card p strong { color: var(--text-dark); }
-
-        /* STRUKTUR DIREKSI */
-        .direksi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; margin-top: 20px; }
-        .direksi-card { background: var(--bg-white); padding: 25px 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; border-bottom: 4px solid var(--accent-gold); transition: transform 0.3s; }
-        .direksi-card:hover { transform: translateY(-5px); }
-        .direksi-avatar { width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)); color: var(--text-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; margin: 0 auto 15px; }
-        .direksi-card h4 { color: var(--primary-blue); font-size: 15px; margin-bottom: 5px; }
-        .direksi-card p { font-size: 13px; color: #666; }
-
-        /* BIDANG USAHA */
-        .usaha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
-        .usaha-item { background: var(--bg-white); padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-left: 4px solid var(--accent-gold); font-size: 14px; }
-        .usaha-item strong { color: var(--primary-blue); }
-
-        /* CTA BACK HOME */
-        .cta-back { text-align: center; padding: 40px 20px 20px; }
+        /* CTA BACK */
+        .cta-back { text-align: center; padding: 40px 20px; }
         .btn-back { display: inline-block; background: var(--primary-blue); color: var(--text-light); padding: 14px 35px; border-radius: 6px; font-weight: bold; text-transform: uppercase; font-size: 14px; transition: background 0.3s, transform 0.3s; }
         .btn-back:hover { background: var(--secondary-blue); transform: translateY(-3px); }
 
@@ -112,8 +101,9 @@
             .main-nav ul { flex-direction: column; gap: 0; padding: 0; }
             .main-nav ul li { text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
             .main-nav ul li a { display: block; padding: 15px; }
-            .page-header h1 { font-size: 26px; }
-            .profile-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 24px; }
+            .pdf-viewer { height: 70vh; min-height: 450px; }
+            .pdf-toolbar { flex-direction: column; align-items: flex-start; }
             .footer-bottom-grid { grid-template-columns: 1fr; text-align: center; }
         }
     </style>
@@ -152,134 +142,59 @@
 
     <section class="page-header">
         <h1>Company <span>Profile</span></h1>
-        <p>CV Mitra Pertama - Kontraktor Sipil, Bangunan, Interior, Sumur Bor, Irigasi & Rent Car</p>
+        <p>Profil lengkap CV Mitra Pertama - Kontraktor Sipil, Bangunan, Interior, Sumur Bor, Irigasi & Rent Car</p>
     </section>
 
-    <!-- PROFIL SINGKAT -->
-    <section class="content-section">
+    <!-- PDF VIEWER -->
+    <section class="pdf-section">
         <div class="container">
-            <div class="profile-grid">
-                <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800" alt="CV Mitra Pertama">
+            <div class="pdf-container">
+                <div class="pdf-toolbar">
+                    <h3>📄 Company Profile CV Mitra Pertama - 2026</h3>
+                    <div class="actions">
+                        <a href="Compro-CV-Mitra-Pertama-2026.pdf" download>⬇️ Download PDF</a>
+                        <a href="Compro-CV-Mitra-Pertama-2026.pdf" target="_blank" class="secondary">🔗 Buka di Tab Baru</a>
+                    </div>
                 </div>
-                <div class="profile-text">
-                    <h3>Profil Perusahaan</h3>
-                    <p><strong>CV MITRA PERTAMA</strong> adalah badan usaha yang bergerak di bidang <strong>Konstruksi, Perdagangan, dan Aktivitas Jasa Lainnya</strong>. Berkedudukan di Dusun I Desa Pematang Sijonam, Kecamatan Perbaungan, Kabupaten Serdang Bedagai, Sumatera Utara.</p>
-                    <p>Kami melayani berbagai kebutuhan konstruksi mulai dari pembangunan gedung, jalan, jembatan, irigasi, sumur bor, interior, hingga penyewaan alat berat dan rent car. Didukung oleh tenaga ahli profesional dan legalitas resmi, kami siap menjadi mitra terpercaya Anda.</p>
-                    <p>Dengan pengalaman dan komitmen pada kualitas, CV Mitra Pertama terus berkembang menjadi salah satu kontraktor yang dipercaya di wilayah Sumatera Utara.</p>
-                </div>
+                
+                <!-- PDF EMBED -->
+                <object class="pdf-viewer" data="Compro-CV-Mitra-Pertama-2026.pdf" type="application/pdf">
+                    <iframe class="pdf-viewer" src="Compro-CV-Mitra-Pertama-2026.pdf">
+                        <div class="pdf-fallback">
+                            <h3>⚠️ Browser Anda Tidak Mendukung Preview PDF</h3>
+                            <p>Silakan unduh file Company Profile kami untuk melihatnya secara lengkap.</p>
+                            <a href="Compro-CV-Mitra-Pertama-2026.pdf" download class="btn-back">⬇️ Download PDF</a>
+                        </div>
+                    </iframe>
+                </object>
             </div>
-        </div>
-    </section>
 
-    <!-- LEGALITAS -->
-    <section class="content-section" style="background: var(--bg-white);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Legalitas & Perizinan</h2>
-            </div>
-            <div class="legal-grid">
-                <div class="legal-card">
-                    <h4>📜 Sertifikat Badan Usaha (SBU)</h4>
-                    <p><strong>Nomor:</strong> 202604131504083101142</p>
-                    <p><strong>KBLI:</strong> 41019 - Konstruksi Gedung Lainnya</p>
-                    <p><strong>Kualifikasi:</strong> Kecil (BG009)</p>
-                    <p><strong>Masa Berlaku:</strong> s.d. 12 April 2029</p>
+            <!-- INFO SINGKAT -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <h4>📜 SBU Konstruksi</h4>
+                    <p>No. 202604131504083101142 - Kualifikasi Kecil</p>
                 </div>
-                <div class="legal-card">
-                    <h4>🆔 Nomor Induk Berusaha (NIB)</h4>
-                    <p><strong>Nomor:</strong> 1102260122629</p>
-                    <p><strong>Status:</strong> PMDN</p>
-                    <p><strong>Skala:</strong> Usaha Kecil</p>
-                    <p><strong>Terbit:</strong> 11 Februari 2026</p>
+                <div class="info-card">
+                    <h4>🆔 NIB</h4>
+                    <p>1102260122629 - PMDN</p>
                 </div>
-                <div class="legal-card">
-                    <h4>💰 NPWP Perusahaan</h4>
-                    <p><strong>NPWP:</strong> 1000000007778059</p>
-                    <p><strong>Nama:</strong> CV MITRA PERTAMA</p>
-                    <p><strong>PKP:</strong> Terdaftar sejak 12 Maret 2026</p>
+                <div class="info-card">
+                    <h4>💰 NPWP</h4>
+                    <p>1000000007778059</p>
                 </div>
-                <div class="legal-card">
+                <div class="info-card">
+                    <h4>📋 KBLI Utama</h4>
+                    <p>41019 - Konstruksi Gedung Lainnya</p>
+                </div>
+                <div class="info-card">
                     <h4>🏛️ Akta Pendirian</h4>
-                    <p><strong>Nomor:</strong> 01</p>
-                    <p><strong>Tanggal:</strong> 16 Desember 2025</p>
-                    <p><strong>Notaris:</strong> Ruslani Flora Doloksaribu, SH</p>
-                    <p><strong>SK Kemenkumham:</strong> AHU-0108024-AH.01.14 Tahun 2025</p>
+                    <p>No. 01 - 16 Desember 2025</p>
                 </div>
-                <div class="legal-card">
-                    <h4>🛡️ BPJS Ketenagakerjaan</h4>
-                    <p><strong>No. Pendaftaran:</strong> 26049703</p>
-                    <p><strong>Program:</strong> JKK & JKM</p>
-                    <p><strong>Mulai:</strong> 1 April 2026</p>
+                <div class="info-card">
+                    <h4>📞 Kontak</h4>
+                    <p>+62 821-6068-1229</p>
                 </div>
-                <div class="legal-card">
-                    <h4>📋 Asosiasi</h4>
-                    <p><strong>Asosiasi:</strong> HJKJ</p>
-                    <p><strong>No. Registrasi LPJK:</strong> F.1.01.BG.K.14.2026.0115749</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STRUKTUR DIREKSI -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Struktur Organisasi</h2>
-            </div>
-            <div class="direksi-grid">
-                <div class="direksi-card">
-                    <div class="direksi-avatar">M</div>
-                    <h4>MUHAMMAD PURWADI SALIM NASUTION</h4>
-                    <p>Direktur</p>
-                    <p style="font-size: 12px; color: #888; margin-top: 5px;">PJBU</p>
-                </div>
-                <div class="direksi-card">
-                    <div class="direksi-avatar">E</div>
-                    <h4>ERDIANTO</h4>
-                    <p>Wakil Direktur</p>
-                    <p style="font-size: 12px; color: #888; margin-top: 5px;">PJTBU</p>
-                </div>
-                <div class="direksi-card">
-                    <div class="direksi-avatar">M</div>
-                    <h4>MUHAMMAD DIRTA</h4>
-                    <p>Komisaris</p>
-                    <p style="font-size: 12px; color: #888; margin-top: 5px;">PJSKBU</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BIDANG USAHA -->
-    <section class="content-section" style="background: var(--bg-white);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Bidang Usaha</h2>
-            </div>
-            <div class="usaha-grid">
-                <div class="usaha-item"><strong>36001</strong> - Penampungan, Penjernihan & Penyaluran Air Minum</div>
-                <div class="usaha-item"><strong>41011</strong> - Konstruksi Gedung Hunian</div>
-                <div class="usaha-item"><strong>41012</strong> - Konstruksi Gedung Perkantoran</div>
-                <div class="usaha-item"><strong>41013</strong> - Konstruksi Gedung Industri</div>
-                <div class="usaha-item"><strong>41014</strong> - Konstruksi Gedung Perbelanjaan</div>
-                <div class="usaha-item"><strong>41015</strong> - Konstruksi Gedung Kesehatan</div>
-                <div class="usaha-item"><strong>41016</strong> - Konstruksi Gedung Pendidikan</div>
-                <div class="usaha-item"><strong>41018</strong> - Konstruksi Gedung Tempat Hiburan & Olahraga</div>
-                <div class="usaha-item"><strong>41019</strong> - Konstruksi Gedung Lainnya</div>
-                <div class="usaha-item"><strong>42101</strong> - Konstruksi Bangunan Sipil Jalan</div>
-                <div class="usaha-item"><strong>42111</strong> - Konstruksi Jalan Raya</div>
-                <div class="usaha-item"><strong>42112</strong> - Konstruksi Jembatan & Jalan Layang</div>
-                <div class="usaha-item"><strong>42201</strong> - Konstruksi Jaringan Irigasi & Drainase</div>
-                <div class="usaha-item"><strong>42211</strong> - Konstruksi Jaringan Irigasi</div>
-                <div class="usaha-item"><strong>42915</strong> - Pengerukan</div>
-                <div class="usaha-item"><strong>43211</strong> - Instalasi Listrik</div>
-                <div class="usaha-item"><strong>43221</strong> - Instalasi Saluran Air (Plambing)</div>
-                <div class="usaha-item"><strong>43303</strong> - Pengecatan</div>
-                <div class="usaha-item"><strong>43905</strong> - Penyewaan Alat Konstruksi dengan Operator</div>
-                <div class="usaha-item"><strong>46100</strong> - Perdagangan Besar atas Dasar Balas Jasa (Fee)</div>
-                <div class="usaha-item"><strong>46421</strong> - Perdagangan Besar Alat Tulis & Gambar</div>
-                <div class="usaha-item"><strong>46639</strong> - Perdagangan Besar Bahan Konstruksi Lainnya</div>
-                <div class="usaha-item"><strong>77100</strong> - Sewa Guna Usaha Mobil, Bus, Truk (Rent Car)</div>
             </div>
         </div>
     </section>
