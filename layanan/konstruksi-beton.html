@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Konstruksi Struktur Beton Medan - CV Mitra Pertama</title>
+    <meta name="description" content="Jasa konstruksi struktur beton bertulang profesional di Medan & Serdang Bedagai. Pondasi, kolom, balok, plat lantai. Konsultasi gratis!">
+    <meta name="keywords" content="Konstruksi Beton Medan, Struktur Beton Bertulang, Pondasi, Kolom, Balok">
+    <meta name="robots" content="index, follow">
+    <style>
+        :root { --primary-blue: #0a3d7a; --secondary-blue: #1565c0; --accent-gold: #d4af37; --text-dark: #333; --text-light: #fff; --bg-light: #f8f9fa; --bg-white: #fff; --bg-gray: #555; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; } ul { list-style: none; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        header { background-color: var(--bg-white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .logo img { height: 55px; } .contact-info { display: flex; gap: 20px; font-size: 14px; color: var(--primary-blue); font-weight: 600; }
+        .contact-info a { display: flex; align-items: center; gap: 5px; }
+        .marquee-container { background-color: var(--primary-blue); color: var(--text-light); padding: 8px 0; font-size: 13px; overflow: hidden; white-space: nowrap; }
+        .marquee-content { display: inline-block; animation: marquee 30s linear infinite; padding-left: 100%; }
+        .marquee-content span { padding: 0 50px; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        .main-nav { width: 100%; background-color: var(--accent-gold); display: flex; justify-content: center; }
+        .main-nav ul { display: flex; gap: 25px; padding: 15px 0; flex-wrap: wrap; justify-content: center; }
+        .main-nav ul li a { color: var(--text-light); font-weight: 700; font-size: 13px; text-transform: uppercase; }
+        .main-nav ul li a:hover, .main-nav ul li a.active { color: var(--primary-blue); }
+        .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; padding: 12px 15px; background-color: var(--primary-blue); width: 100%; align-items: flex-start; }
+        .menu-toggle span { width: 25px; height: 3px; background-color: var(--text-light); }
+        .service-hero { min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--text-light); padding: 80px 20px; background: linear-gradient(rgba(10, 61, 122, 0.85), rgba(21, 101, 192, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1500') center/cover; }
+        .service-hero-content { max-width: 900px; }
+        .breadcrumb { font-size: 14px; margin-bottom: 15px; color: #ddd; } .breadcrumb a { color: var(--accent-gold); }
+        .service-hero h1 { font-size: 44px; text-transform: uppercase; margin-bottom: 15px; } .service-hero h1 span { color: var(--accent-gold); }
+        .service-hero p { font-size: 18px; margin-bottom: 30px; }
+        .btn-primary { display: inline-block; background: var(--accent-gold); color: var(--text-light); padding: 15px 35px; border-radius: 6px; font-weight: bold; text-transform: uppercase; }
+        .btn-primary:hover { background: #f1c40f; transform: translateY(-3px); }
+        .btn-wa { display: inline-block; background: #25D366; color: var(--text-light); padding: 15px 35px; border-radius: 6px; font-weight: bold; text-transform: uppercase; margin-left: 10px; }
+        .btn-wa:hover { background: #128C7E; }
+        .section { padding: 70px 0; } .section-alt { background: var(--bg-white); }
+        .section-title { text-align: center; padding: 0 0 40px; }
+        .section-title h2 { font-size: 32px; color: var(--primary-blue); text-transform: uppercase; position: relative; display: inline-block; padding-bottom: 10px; }
+        .section-title h2::after { content: ''; position: absolute; width: 60%; height: 3px; background: var(--accent-gold); bottom: 0; left: 20%; }
+        .section-title p { max-width: 700px; margin: 15px auto 0; color: #666; }
+        .desc-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+        .desc-text h3 { color: var(--primary-blue); font-size: 24px; margin-bottom: 15px; }
+        .desc-text p { margin-bottom: 15px; text-align: justify; } .desc-image img { width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .subservices-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .subservice-card { background: var(--bg-white); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .subservice-card:hover { transform: translateY(-8px); } .subservice-card img { width: 100%; height: 200px; object-fit: cover; }
+        .subservice-body { padding: 20px; } .subservice-body h4 { color: var(--primary-blue); font-size: 18px; margin-bottom: 8px; }
+        .subservice-body p { font-size: 14px; color: #666; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+        .feature-card { background: var(--bg-white); padding: 30px 20px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border-top: 4px solid var(--accent-gold); }
+        .feature-icon { font-size: 40px; margin-bottom: 15px; } .feature-card h4 { color: var(--primary-blue); margin-bottom: 10px; } .feature-card p { font-size: 14px; color: #666; }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .process-step { background: var(--bg-white); padding: 25px 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); text-align: center; }
+        .process-num { width: 50px; height: 50px; background: var(--primary-blue); color: var(--text-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: bold; margin: 0 auto 15px; border: 3px solid var(--accent-gold); }
+        .process-step h4 { color: var(--primary-blue); margin-bottom: 8px; font-size: 16px; } .process-step p { font-size: 13px; color: #666; }
+        .project-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .project-gallery-item { position: relative; height: 220px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer; }
+        .project-gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .project-gallery-item:hover img { transform: scale(1.1); }
+        .project-gallery-item .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,61,122,0.9), transparent); color: var(--text-light); padding: 20px; display: flex; align-items: flex-end; opacity: 0; transition: opacity 0.3s; }
+        .project-gallery-item:hover .overlay { opacity: 1; } .project-gallery-item .overlay h4 { color: var(--accent-gold); font-size: 16px; }
+        .cta-section { background: linear-gradient(rgba(10, 61, 122, 0.9), rgba(21, 101, 192, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1500') center/cover; color: var(--text-light); text-align: center; padding: 70px 20px; }
+        .cta-section h2 { font-size: 32px; margin-bottom: 15px; } .cta-section h2 span { color: var(--accent-gold); }
+        .cta-section p { font-size: 16px; max-width: 700px; margin: 0 auto 25px; }
+        .other-services { padding: 50px 0; background: var(--bg-light); }
+        .other-services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .other-service-link { background: var(--bg-white); padding: 15px 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.06); border-left: 4px solid var(--accent-gold); font-size: 14px; font-weight: 600; color: var(--primary-blue); transition: all 0.3s; }
+        .other-service-link:hover { background: var(--primary-blue); color: var(--text-light); transform: translateX(5px); }
+        footer { background-color: #04152b; color: var(--text-light); padding: 30px 0; }
+        .footer-bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+        .address-info h4 { color: var(--accent-gold); font-size: 18px; margin-bottom: 10px; } .address-info p { margin-bottom: 5px; font-size: 14px; color: #ccc; } .address-info a { color: var(--accent-gold); font-weight: 600; }
+        .map-container { width: 100%; height: 200px; border-radius: 8px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.5); } .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .copyright { text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: #aaa; }
+        @media (max-width: 768px) {
+            .top-bar { flex-direction: column; gap: 0; padding: 0; background-color: var(--accent-gold); }
+            .logo { padding: 15px; background-color: var(--bg-white); width: 100%; text-align: center; }
+            .contact-info { flex-direction: row; justify-content: space-between; padding: 8px 15px; width: 100%; font-size: 12px; background-color: var(--accent-gold); }
+            .contact-info a:nth-child(1) { order: 2; } .contact-info a:nth-child(2) { order: 1; }
+            .menu-toggle { display: flex; } .main-nav { display: none; background-color: var(--bg-gray); }
+            .main-nav.active { display: block; } .main-nav ul { flex-direction: column; gap: 0; padding: 0; }
+            .main-nav ul li { text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; } .main-nav ul li a { display: block; padding: 15px; }
+            .service-hero h1 { font-size: 26px; } .btn-wa { margin-left: 0; margin-top: 10px; } .desc-grid { grid-template-columns: 1fr; }
+            .footer-bottom-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container top-bar">
+            <a href="../index.html" class="logo"><img src="https://cvmitrapertama.vercel.app/logo-cvmitrapertama.png" alt="Logo" onerror="this.src='https://placehold.co/200x50/ffffff/0a3d7a?text=CV.+MITRA+PERTAMA'"></a>
+            <div class="contact-info"><a href="mailto:Mitrapertama03@gmail.com">✉️ Mitrapertama03@gmail.com</a><a href="tel:+6282160681229">📞 +62 821-6068-1229</a></div>
+        </div>
+        <div class="marquee-container"><div class="marquee-content"><span>Jasa Konstruksi Struktur Beton Profesional - CV Mitra Pertama</span><span>Jasa Konstruksi Struktur Beton Profesional - CV Mitra Pertama</span></div></div>
+        <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+        <nav class="main-nav" id="navbar">
+            <ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../company-profile.html">Company Profile</a></li><li><a href="../services.html" class="active">Services</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../contact.html">Contact Us</a></li></ul>
+        </nav>
+    </header>
+
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../services.html">Services</a> / Konstruksi Struktur Beton</div>
+            <h1>Konstruksi <span>Struktur Beton</span></h1>
+            <p>Pembangunan struktur beton bertulang berkualitas tinggi untuk pondasi, kolom, balok, dan plat lantai.</p>
+            <a href="../contact.html" class="btn-primary">Konsultasi Gratis</a>
+            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Konstruksi%20Struktur%20Beton" class="btn-wa" target="_blank">💬 WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="desc-grid">
+                <div class="desc-text">
+                    <h3>Struktur Beton yang Kokoh & Tahan Lama</h3>
+                    <p>CV Mitra Pertama berpengalaman dalam pembangunan struktur beton bertulang untuk berbagai jenis bangunan—dari rumah tinggal, ruko, hingga gedung bertingkat.</p>
+                    <p>Kami menggunakan beton dengan mutu sesuai SNI (K-225, K-250, K-300, hingga K-400), serta besi tulangan berkualitas tinggi dari supplier terpercaya. Setiap tahap pengerjaan diawasi oleh tenaga ahli bersertifikat.</p>
+                    <p>Hasilnya adalah struktur yang kokoh, aman, dan tahan lama untuk jangka panjang.</p>
+                </div>
+                <div class="desc-image"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800" alt="Konstruksi Beton"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title"><h2>Spesialisasi Kami</h2><p>Pekerjaan struktur beton yang kami tangani</p></div>
+            <div class="subservices-grid">
+                <div class="subservice-card"><img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&q=80&w=500" alt="Pondasi"><div class="subservice-body"><h4>🏗️ Pondasi</h4><p>Pondasi telapak, strauss pile, bore pile, dan pondasi dalam lainnya.</p></div></div>
+                <div class="subservice-card"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=500" alt="Kolom"><div class="subservice-body"><h4>🛠️ Kolom & Balok</h4><p>Pembuatan kolom praktis, kolom struktur, sloof, dan balok beton bertulang.</p></div></div>
+                <div class="subservice-card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=500" alt="Plat Lantai"><div class="subservice-body"><h4>🧱 Plat Lantai</h4><p>Plat lantai beton konvensional maupun bondek untuk bangunan bertingkat.</p></div></div>
+                <div class="subservice-card"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=500" alt="Dinding Beton"><div class="subservice-body"><h4>🧱 Dinding Beton</h4><p>Dinding beton bertulang, retaining wall, dan dinding basement.</p></div></div>
+                <div class="subservice-card"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=500" alt="Cor Dak"><div class="subservice-body"><h4>🏢 Cor Dak Beton</h4><p>Pengecoran dak beton untuk atap, lantai tambahan, dan area parkir.</p></div></div>
+                <div class="subservice-card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=500" alt="Struktur Khusus"><div class="subservice-body"><h4>⚙️ Struktur Khusus</h4><p>Struktur beton untuk tangki air, kolam, dan bangunan khusus lainnya.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title"><h2>Mengapa Memilih Kami?</h2></div>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon">💪</div><h4>Kualitas SNI</h4><p>Beton & besi sesuai standar nasional Indonesia.</p></div>
+                <div class="feature-card"><div class="feature-icon">👷</div><h4>Tenaga Ahli</h4><p>Didukung tukang & mandor berpengalaman bertahun-tahun.</p></div>
+                <div class="feature-card"><div class="feature-icon">⏱️</div><h4>Tepat Waktu</h4><p>Jadwal pengerjaan yang terencana & konsisten.</p></div>
+                <div class="feature-card"><div class="feature-icon">🛡️</div><h4>Garansi Struktur</h4><p>Kami memberikan garansi untuk pekerjaan struktur.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title"><h2>Proses Pengerjaan</h2></div>
+            <div class="process-grid">
+                <div class="process-step"><div class="process-num">1</div><h4>Survey</h4><p>Pengukuran lahan & analisis kondisi tanah.</p></div>
+                <div class="process-step"><div class="process-num">2</div><h4>Persiapan</h4><p>Pengadaan material & pembuatan bekisting.</p></div>
+                <div class="process-step"><div class="process-num">3</div><h4>Pembesian</h4><p>Perakitan besi tulangan sesuai gambar kerja.</p></div>
+                <div class="process-step"><div class="process-num">4</div><h4>Pengecoran</h4><p>Pengecoran beton dengan mutu sesuai spesifikasi.</p></div>
+                <div class="process-step"><div class="process-num">5</div><h4>Curing</h4><p>Perawatan beton & pembukaan bekisting.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title"><h2>Galeri Proyek</h2></div>
+            <div class="project-gallery">
+                <div class="project-gallery-item"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=500" alt="Gambar"><div class="overlay"><h4>Pondasi Gedung Bertingkat</h4></div></div>
+                <div class="project-gallery-item"><img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&q=80&w=500" alt="Gambar"><div class="overlay"><h4>Kolom & Balok Gudang</h4></div></div>
+                <div class="project-gallery-item"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=500" alt="Gambar"><div class="overlay"><h4>Cor Dak Lantai 2</h4></div></div>
+                <div class="project-gallery-item"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=500" alt="Gambar"><div class="overlay"><h4>Retaining Wall</h4></div></div>
+                <div class="project-gallery-item"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=500" alt="Gambar"><div class="overlay"><h4>Struktur Beton Ruko</h4></div></div>
+                <div class="project-gallery-item"><img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=500" alt="Gambar"><div class="overlay"><h4>Pengecoran Plat Lantai</h4></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Butuh <span>Struktur Beton Berkualitas?</span></h2>
+            <p>Konsultasikan kebutuhan struktur beton Anda sekarang. Tim kami siap membantu.</p>
+            <a href="../contact.html" class="btn-primary">Konsultasi Gratis</a>
+            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Konstruksi%20Struktur%20Beton" class="btn-wa" target="_blank">💬 WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="other-services">
+        <div class="container">
+            <div class="section-title"><h2>Layanan Lainnya</h2></div>
+            <div class="other-services-grid">
+                <a href="desain-perencanaan.html" class="other-service-link">🎨 Desain & Perencanaan</a>
+                <a href="konstruksi-fasad.html" class="other-service-link">🏢 Konstruksi Fasad Bangunan</a>
+                <a href="renovasi-restorasi.html" class="other-service-link">🔨 Renovasi & Restorasi</a>
+                <a href="konstruksi-baja.html" class="other-service-link">⚙️ Konstruksi Struktur Baja</a>
+                <a href="infrastruktur-jalan.html" class="other-service-link">🛣️ Infrastruktur Jalan & Jembatan</a>
+                <a href="interior-furniture.html" class="other-service-link">🛋️ Interior & Furniture</a>
+                <a href="sumur-bor.html" class="other-service-link">💧 Sumur Bor Rumahan & Dalam</a>
+                <a href="irigasi-sungai.html" class="other-service-link">🌊 Irigasi & Normalisasi Sungai</a>
+                <a href="kolam-renang.html" class="other-service-link">🏊 Kolam Renang & SPA Pool</a>
+                <a href="cut-fill.html" class="other-service-link">🚜 Cut & Fill Alat Berat</a>
+                <a href="pengadaan-material.html" class="other-service-link">📦 Pengadaan Material</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-bottom-grid">
+            <div class="address-info"><h4>Alamat Kantor Kami</h4><p>Jl. Suka Air, Pematang Sijonam, Kec. Perbaungan, Kabupaten Serdang Bedagai, Sumatera Utara 20986</p><p>Email: <a href="mailto:Mitrapertama03@gmail.com">Mitrapertama03@gmail.com</a></p><p>Telp/WA: <a href="tel:+6282160681229">+62 821-6068-1229</a></p></div>
+            <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.087375461506!2d98.99044077481106!3d3.567364696406827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30314f002df5f37d%3A0x47e23904a764a6b8!2sDoaibu%20rental%20mobil%20perbaungan!5e0!3m2!1sid!2sid!4v1791874949947!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 CV Mitra Pertama. All Rights Reserved.</p></div>
+    </footer>
+    <script>document.getElementById('mobile-menu').addEventListener('click', function() { document.getElementById('navbar').classList.toggle('active'); });</script>
+</body>
+</html>
