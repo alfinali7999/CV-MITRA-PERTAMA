@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Proyek & Jasa Konstruksi - CV Mitra Pertama Medan</title>
+    <meta name="description" content="Pilih jenis proyek konstruksi, interior, dan infrastruktur yang Anda butuhkan. Hubungi kami untuk negosiasi harga terbaik.">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        :root { --primary-blue: #0a3d7a; --secondary-blue: #1565c0; --accent-gold: #d4af37; --text-dark: #333; --text-light: #fff; --bg-light: #f8f9fa; --bg-white: #fff; --bg-gray: #555; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+        /* HEADER */
+        header { background-color: var(--bg-white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .logo img { height: 55px; width: auto; }
+        .contact-info { display: flex; gap: 20px; font-size: 14px; color: var(--primary-blue); font-weight: 600; }
+        .contact-info a { display: flex; align-items: center; gap: 5px; }
+        .marquee-container { background-color: var(--primary-blue); color: var(--text-light); padding: 8px 0; font-size: 13px; overflow: hidden; white-space: nowrap; }
+        .marquee-content { display: inline-block; animation: marquee 30s linear infinite; padding-left: 100%; }
+        .marquee-content span { padding: 0 50px; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        
+        /* NAV */
+        .main-nav { width: 100%; background-color: var(--accent-gold); display: flex; justify-content: center; }
+        .main-nav ul { display: flex; gap: 25px; padding: 15px 0; flex-wrap: wrap; justify-content: center; }
+        .main-nav ul li a { color: var(--text-light); font-weight: 700; font-size: 13px; text-transform: uppercase; }
+        .main-nav ul li a:hover, .main-nav ul li a.active { color: var(--primary-blue); }
+        .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; padding: 12px 15px; background-color: var(--primary-blue); width: 100%; align-items: flex-start; }
+        .menu-toggle span { width: 25px; height: 3px; background-color: var(--text-light); }
+
+        /* PAGE HEADER */
+        .page-header { background: linear-gradient(rgba(10, 61, 122, 0.85), rgba(21, 101, 192, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1500') center/cover; color: var(--text-light); padding: 70px 20px; text-align: center; }
+        .page-header h1 { font-size: 38px; text-transform: uppercase; margin-bottom: 10px; }
+        .page-header h1 span { color: var(--accent-gold); }
+        .page-header p { font-size: 16px; max-width: 700px; margin: 0 auto; }
+
+        /* SECTION & FILTER */
+        .section { padding: 60px 0; background: var(--bg-white); }
+        .section-title { text-align: center; padding: 0 0 40px; display: flex; flex-direction: column; align-items: center; }
+        .section-title h2 { font-size: 32px; color: var(--primary-blue); text-transform: uppercase; position: relative; display: inline-block; padding-bottom: 10px; }
+        .section-title h2::after { content: ''; position: absolute; width: 60%; height: 3px; background: var(--accent-gold); bottom: 0; left: 20%; }
+        
+        .catalog-filter { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; }
+        .filter-btn { background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); padding: 8px 20px; border-radius: 25px; font-size: 13px; font-weight: 700; cursor: pointer; text-transform: uppercase; transition: all 0.3s; }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary-blue); color: var(--text-light); }
+
+        /* GRID & CARD */
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
+        .catalog-card { background: var(--bg-white); border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .catalog-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
+
+        .catalog-image { position: relative; height: 220px; overflow: hidden; background: #000; }
+        .catalog-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .catalog-card:hover .catalog-image img { transform: scale(1.1); }
+        .catalog-tag { position: absolute; top: 15px; left: 15px; background: var(--accent-gold); color: var(--primary-blue); font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; z-index: 10; }
+        .btn-view-gallery { position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 20px; font-size: 12px; cursor: pointer; z-index: 10; }
+
+        .catalog-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .catalog-body h3 { font-size: 19px; color: var(--primary-blue); margin-bottom: 8px; }
+        .catalog-desc { font-size: 13px; color: #666; margin-bottom: 15px; font-style: italic; }
+        .catalog-spec { list-style: none; padding: 15px 0 0; margin-bottom: 20px; border-top: 1px solid #f0f0f0; flex-grow: 1; }
+        .catalog-spec li { font-size: 13px; color: #555; margin-bottom: 8px; display: flex; gap: 8px; }
+
+        .catalog-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed #ddd; padding-top: 15px; margin-top: auto; }
+        .price-label { font-size: 13px; color: #888; font-weight: 600; font-style: italic; }
+        .contact-actions { display: flex; gap: 8px; }
+        .btn-action { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; color: white; transition: transform 0.2s; }
+        .btn-action:hover { transform: scale(1.15); }
+        .btn-wa { background: #25D366; }
+        .btn-telp { background: var(--primary-blue); }
+        .btn-email { background: #EA4335; }
+
+        /* FOOTER */
+        footer { background-color: #04152b; color: var(--text-light); padding: 30px 0; }
+        .footer-bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+        .address-info h4 { color: var(--accent-gold); font-size: 18px; margin-bottom: 10px; }
+        .address-info p { margin-bottom: 5px; font-size: 14px; color: #ccc; }
+        .address-info a { color: var(--accent-gold); font-weight: 600; }
+        .map-container { width: 100%; height: 200px; border-radius: 8px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.5); }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .copyright { text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: #aaa; }
+
+        @media (max-width: 768px) {
+            .top-bar { flex-direction: column; gap: 0; padding: 0; background-color: var(--accent-gold); }
+            .logo { padding: 15px; background-color: var(--bg-white); width: 100%; text-align: center; }
+            .contact-info { flex-direction: row; justify-content: space-between; padding: 8px 15px; width: 100%; font-size: 12px; background-color: var(--accent-gold); }
+            .contact-info a:nth-child(1) { order: 2; }
+            .contact-info a:nth-child(2) { order: 1; }
+            .menu-toggle { display: flex; }
+            .main-nav { display: none; background-color: var(--bg-gray); }
+            .main-nav.active { display: block; }
+            .main-nav ul { flex-direction: column; gap: 0; padding: 0; }
+            .main-nav ul li { text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+            .main-nav ul li a { display: block; padding: 15px; }
+            .page-header h1 { font-size: 26px; }
+            .footer-bottom-grid { grid-template-columns: 1fr; text-align: center; }
+            .catalog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container top-bar">
+            <a href="index.html" class="logo">
+                <img src="https://cvmitrapertama.vercel.app/logo-cvmitrapertama.png" alt="Logo" onerror="this.src='https://placehold.co/200x50/ffffff/0a3d7a?text=CV.+MITRA+PERTAMA'">
+            </a>
+            <div class="contact-info">
+                <a href="mailto:Mitrapertama03@gmail.com">✉️ Mitrapertama03@gmail.com</a>
+                <a href="tel:+6281353676529">📞 +62 813-5367-6529</a>
+            </div>
+        </div>
+        <div class="marquee-container"><div class="marquee-content"><span>Katalog Proyek CV Mitra Pertama - Pilih, Nego, dan Bangun!</span><span>Katalog Proyek CV Mitra Pertama - Pilih, Nego, dan Bangun!</span></div></div>
+        <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+        <nav class="main-nav" id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="company-profile.html">Company Profile</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="katalog.html" class="active">Katalog</a></li> <!-- Menu Baru -->
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Katalog <span>Proyek</span></h1>
+        <p>Pilih jenis proyek impian Anda. Dapatkan penawaran harga terbaik dengan menghubungi kami melalui WhatsApp, Telepon, atau Email.</p>
+    </section>
+
+    <!-- SECTION KATALOG -->
+    <section class="section">
+        <div class="container">
+            <div class="catalog-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="rumah">Rumah</button>
+                <button class="filter-btn" data-filter="komersial">Komersial</button>
+                <button class="filter-btn" data-filter="infrastruktur">Infrastruktur</button>
+                <button class="filter-btn" data-filter="interior">Interior</button>
+            </div>
+
+            <div class="catalog-grid">
+                
+                <!-- KARTU 1 -->
+                <div class="catalog-card" data-category="rumah">
+                    <div class="catalog-image">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&q=80&w=500" alt="Rumah Tipe 36" class="main-image" id="img-1">
+                        <span class="catalog-tag">Rumah</span>
+                        <button class="btn-view-gallery" onclick="openGallery('Rumah Minimalis Tipe 36', ['https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1000', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000'])">📷 Lihat Foto</button>
+                    </div>
+                    <div class="catalog-body">
+                        <h3>Rumah Minimalis Tipe 36</h3>
+                        <p class="catalog-desc">Rumah 1 lantai desain modern, tata ruang efisien, cocok untuk keluarga muda.</p>
+                        <ul class="catalog-spec">
+                            <li>📏 Luas: 36 m² (6x6)</li>
+                            <li>🛏️ 2 Kamar Tidur, 1 Kamar Mandi</li>
+                        </ul>
+                        <div class="catalog-footer">
+                            <div class="price-label">Hubungi untuk Harga</div>
+                            <div class="contact-actions">
+                                <!-- Tombol WA -->
+                                <a href="https://wa.me/6281353676529?text=Halo,%20saya%20tertarik%20Rumah%20Tipe%2036" class="btn-action btn-wa" target="_blank" title="WhatsApp">
+                                    <svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                                </a>
+                                <!-- Tombol Telp -->
+                                <a href="tel:+6281353676529" class="btn-action btn-telp" title="Telepon">
+                                    <svg viewBox="0 0 512 512" width="18" height="18" fill="currentColor"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                </a>
+                                <!-- Tombol Email -->
+                                <a href="mailto:Mitrapertama03@gmail.com?subject=Penawaran%20Rumah%20Tipe%2036" class="btn-action btn-email" title="Email">
+                                    <svg viewBox="0 0 512 512" width="18" height="18" fill="currentColor"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KARTU 2 -->
+                <div class="catalog-card" data-category="komersial">
+                    <div class="catalog-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=500" alt="Ruko 2 Lantai" class="main-image">
+                        <span class="catalog-tag">Komersial</span>
+                        <button class="btn-view-gallery" onclick="openGallery('Ruko 2 Lantai', ['https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000', 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000'])">📷 Lihat Foto</button>
+                    </div>
+                    <div class="catalog-body">
+                        <h3>Ruko 2 Lantai (4x12)</h3>
+                        <p class="catalog-desc">Ruko strategis fasad ACP & kaca tempered. Cocok untuk toko & kantor.</p>
+                        <ul class="catalog-spec">
+                            <li>📏 Luas: 96 m² (2 Lantai)</li>
+                            <li>🏪 Cocok untuk Toko/Kantor</li>
+                        </ul>
+                        <div class="catalog-footer">
+                            <div class="price-label">Hubungi untuk Harga</div>
+                            <div class="contact-actions">
+                                <a href="https://wa.me/6281353676529?text=Halo,%20saya%20tertarik%20Ruko" class="btn-action btn-wa" target="_blank"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+                                <a href="tel:+6281353676529" class="btn-action btn-telp"><svg viewBox="0 0 512 512" width="18" height="18" fill="currentColor"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></a>
+                                <a href="mailto:Mitrapertama03@gmail.com?subject=Penawaran%20Ruko" class="btn-action btn-email"><svg viewBox="0 0 512 512" width="18" height="18" fill="currentColor"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anda bisa menambahkan kartu katalog lainnya di sini dengan format yang sama -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-bottom-grid">
+            <div class="address-info">
+                <h4>Alamat Kantor Kami</h4>
+                <p>Jl. Suka Air, Pematang Sijonam, Kec. Perbaungan, Kabupaten Serdang Bedagai, Sumatera Utara 20986</p>
+                <p>Email: <a href="mailto:Mitrapertama03@gmail.com">Mitrapertama03@gmail.com</a></p>
+                <p>Telp/WA: <a href="tel:+6281353676529">+62 813-5367-6529</a></p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.087375461506!2d98.99044077481106!3d3.567364696406827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30314f002df5f37d%3A0x47e23904a764a6b8!2sDoaibu%20rental%20mobil%20perbaungan!5e0!3m2!1sid!2sid!4v1791874949947!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 CV Mitra Pertama. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT UNTUK FILTER, MENU, & POPUP GALERI -->
+    <script>
+        // 1. Mobile Menu
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('navbar').classList.toggle('active');
+        });
+
+        // 2. Filter Katalog
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const catalogCards = document.querySelectorAll('.catalog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filterValue = this.getAttribute('data-filter');
+                catalogCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 3. Pop-up Galeri
+        function openGallery(title, images) {
+            let modal = document.getElementById('custom-gallery-modal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'custom-gallery-modal';
+                modal.className = 'gallery-modal';
+                modal.innerHTML = `
+                    <span class="gallery-close" onclick="closeGallery()">&times;</span>
+                    <div class="gallery-modal-header" id="gallery-title"></div>
+                    <div id="gallery-main-container" style="text-align: center;"></div>
+                    <div id="gallery-thumbs-container" style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; justify-content: center;"></div>
+                `;
+                document.body.appendChild(modal);
+            }
+            document.getElementById('gallery-title').innerText = title;
+            const mainContainer = document.getElementById('gallery-main-container');
+            const thumbsContainer = document.getElementById('gallery-thumbs-container');
+            mainContainer.innerHTML = `<img id="modal-main-img" src="${images[0]}" style="max-width: 90vw; max-height: 70vh; border-radius: 10px; object-fit: contain;">`;
+            thumbsContainer.innerHTML = '';
+            images.forEach((imgUrl, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = imgUrl;
+                thumb.style.cssText = `width: 60px; height: 60px; object-fit: cover; border-radius: 5px; cursor: pointer; border: ${index === 0 ? '2px solid var(--accent-gold)' : '2px solid transparent'};`;
+                thumb.onclick = function() {
+                    document.getElementById('modal-main-img').src = imgUrl;
+                    const allThumbs = thumbsContainer.querySelectorAll('img');
+                    allThumbs.forEach(t => t.style.border = '2px solid transparent');
+                    this.style.border = '2px solid var(--accent-gold)';
+                };
+                thumbsContainer.appendChild(thumb);
+            });
+            modal.classList.add('active');
+        }
+
+        function closeGallery() {
+            document.getElementById('custom-gallery-modal').classList.remove('active');
+        }
+    </script>
+    <style>
+        /* CSS Tambahan untuk Modal Galeri */
+        .gallery-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; flex-direction: column; padding: 20px; }
+        .gallery-modal.active { display: flex; }
+        .gallery-modal-header { color: white; font-size: 20px; margin-bottom: 20px; text-align: center; }
+        .gallery-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
+        .gallery-close:hover { color: var(--accent-gold); }
+    </style>
+</body>
+</html>
