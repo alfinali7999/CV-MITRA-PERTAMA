@@ -11,6 +11,18 @@
     <meta name="robots" content="index, follow">
 
     <style>
+                /* CSS PEMAKSA GRID 3 KOLOM */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Memaksa 3 kolom */
+            gap: 25px;
+            width: 100%;
+        }
+        
+        /* Responsif untuk HP (1 kolom) */
+        @media (max-width: 768px) {
+            .catalog-grid { grid-template-columns: 1fr; }
+        }
         :root {
             --primary-blue: #0a3d7a;
             --secondary-blue: #1565c0;
