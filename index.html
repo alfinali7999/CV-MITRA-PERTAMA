@@ -564,159 +564,6 @@
             .gallery-item img { height: 160px; }
             .partners-track img { height: 75px; max-width: 150px; }
         }
-                /* ================= KATALOG PROYEK ================= */
-        .catalog-section { padding: 50px 0; background-color: var(--bg-white); }
-        .catalog-section .section-title p { max-width: 800px; }
-        
-        /* Tombol Filter */
-        .catalog-filter {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-        .filter-btn {
-            background: transparent;
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 13px;
-            font-weight: 700;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s;
-        }
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary-blue);
-            color: var(--text-light);
-        }
-
-        /* Grid Katalog */
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        /* Kartu Katalog */
-        .catalog-card {
-            background: var(--bg-white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-        .catalog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        /* Gambar */
-        .catalog-image {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-        }
-        .catalog-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        .catalog-card:hover .catalog-image img {
-            transform: scale(1.1);
-        }
-
-        /* Tag Kategori */
-        .catalog-tag {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            font-size: 11px;
-            font-weight: bold;
-            padding: 4px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-        }
-
-        /* Body */
-        .catalog-body {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .catalog-body h3 {
-            font-size: 18px;
-            color: var(--primary-blue);
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        /* Spesifikasi */
-        .catalog-spec {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-        .catalog-spec li {
-            font-size: 13px;
-            color: #555;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            line-height: 1.4;
-        }
-
-        /* Footer Harga & Tombol */
-        .catalog-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px dashed #ddd;
-            padding-top: 15px;
-            margin-top: auto;
-        }
-        .price-label {
-            font-size: 13px;
-            color: #888;
-            font-weight: 600;
-            font-style: italic;
-        }
-        .btn-nego {
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 13px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            white-space: nowrap;
-        }
-        .btn-nego:hover {
-            background: #f1c40f;
-            transform: scale(1.05);
-        }
-
-        /* Responsif Mobile */
-        @media (max-width: 768px) {
-            .catalog-grid { grid-template-columns: 1fr; }
-            .catalog-filter { gap: 8px; }
-            .filter-btn { padding: 6px 15px; font-size: 12px; }
-        }
     </style>
 </head>
 <body>
@@ -770,8 +617,8 @@
     <section class="services-section">
         <div class="container">
             <div class="section-title">
-                <h2>Pilih Layanan yang Anda Butuhkan</h2>
-                <p>Klik salah satu layanan untuk melihat detail lengkap, spesialisasi, dan galeri proyek.</p>
+            <h2>Pilih Layanan yang Anda Butuhkan</h2>
+            <p>Klik salah satu layanan untuk melihat detail lengkap, spesialisasi, dan galeri proyek.</p>
             </div>
             <div class="services-grid">
 
@@ -839,144 +686,22 @@
         </div>
     </section>
 
-        <!-- ================= KATALOG PROYEK ================= -->
-    <section class="catalog-section">
+    <section style="padding: 50px 0; background-color: var(--bg-light);">
         <div class="container">
-            <div class="section-title">
-                <h2>Katalog Proyek</h2>
-                <p>Pilih jenis proyek yang Anda butuhkan. Harga menyesuaikan spesifikasi & lokasi, hubungi kami untuk penawaran terbaik.</p>
-            </div>
-            
-            <!-- Filter Kategori -->
-            <div class="catalog-filter">
+            <!-- Tombol Filter -->
+            <div class="catalog-filter" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px;">
                 <button class="filter-btn active" data-filter="all">Semua</button>
                 <button class="filter-btn" data-filter="rumah">Rumah</button>
                 <button class="filter-btn" data-filter="komersial">Komersial</button>
-                <button class="filter-btn" data-filter="infrastruktur">Infrastruktur</button>
-                <button class="filter-btn" data-filter="interior">Interior</button>
             </div>
 
-            <div class="catalog-grid">
-                <!-- Item Katalog 1 -->
-                <div class="catalog-card" data-category="rumah">
-                    <div class="catalog-image">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&q=80&w=500" alt="Rumah Minimalis Tipe 36">
-                        <span class="catalog-tag">Rumah</span>
-                    </div>
-                    <div class="catalog-body">
-                        <h3>Rumah Minimalis Tipe 36</h3>
-                        <ul class="catalog-spec">
-                            <li>📏 Luas: 36 m² (6x6)</li>
-                            <li>🛏️ 2 Kamar Tidur, 1 Kamar Mandi</li>
-                            <li>🧱 Material: Bata Merah & Beton</li>
-                        </ul>
-                        <div class="catalog-footer">
-                            <div class="price-label">Hubungi untuk Harga</div>
-                            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20pesan%20Rumah%20Minimalis%20Tipe%2036,%20bisa%20minta%20penawaran%20harganya?" class="btn-nego" target="_blank">Nego Harga 💬</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Wadah Kosong -->
+            <div class="catalog-grid" id="wadah-produk-home">
+                <!-- Akan diisi oleh JavaScript -->
+            </div>
 
-                <!-- Item Katalog 2 -->
-                <div class="catalog-card" data-category="rumah">
-                    <div class="catalog-image">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=500" alt="Rumah 2 Lantai Modern">
-                        <span class="catalog-tag">Rumah</span>
-                    </div>
-                    <div class="catalog-body">
-                        <h3>Rumah 2 Lantai Modern</h3>
-                        <ul class="catalog-spec">
-                            <li>📏 Luas: 120 m² (2 Lantai)</li>
-                            <li>🛏️ 3 Kamar Tidur, 3 Kamar Mandi</li>
-                            <li>🧱 Material: Struktur Beton Bertulang</li>
-                        </ul>
-                        <div class="catalog-footer">
-                            <div class="price-label">Hubungi untuk Harga</div>
-                            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20pesan%20Rumah%202%20Lantai%20Modern,%20bisa%20minta%20penawaran%20harganya?" class="btn-nego" target="_blank">Nego Harga 💬</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item Katalog 3 -->
-                <div class="catalog-card" data-category="komersial">
-                    <div class="catalog-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=500" alt="Ruko 2 Lantai">
-                        <span class="catalog-tag">Komersial</span>
-                    </div>
-                    <div class="catalog-body">
-                        <h3>Ruko 2 Lantai (4x12)</h3>
-                        <ul class="catalog-spec">
-                            <li>📏 Luas: 96 m² (2 Lantai)</li>
-                            <li>🏪 Cocok untuk Toko/Kantor</li>
-                            <li>🧱 Fasad: ACP & Kaca Tempered</li>
-                        </ul>
-                        <div class="catalog-footer">
-                            <div class="price-label">Hubungi untuk Harga</div>
-                            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20pesan%20Ruko%202%20Lantai,%20bisa%20minta%20penawaran%20harganya?" class="btn-nego" target="_blank">Nego Harga 💬</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item Katalog 4 -->
-                <div class="catalog-card" data-category="interior">
-                    <div class="catalog-image">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=500" alt="Interior Kantor">
-                        <span class="catalog-tag">Interior</span>
-                    </div>
-                    <div class="catalog-body">
-                        <h3>Interior Kantor Minimalis</h3>
-                        <ul class="catalog-spec">
-                            <li>📏 Luas: 50 - 100 m²</li>
-                            <li>🪑 Custom Furniture (Meja, Kursi)</li>
-                            <li>🎨 Desain 3D & Instalasi</li>
-                        </ul>
-                        <div class="catalog-footer">
-                            <div class="price-label">Hubungi untuk Harga</div>
-                            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20pesan%20Interior%20Kantor%20Minimalis,%20bisa%20minta%20penawaran%20harganya?" class="btn-nego" target="_blank">Nego Harga 💬</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item Katalog 5 -->
-                <div class="catalog-card" data-category="infrastruktur">
-                    <div class="catalog-image">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=500" alt="Pengecoran Jalan Beton">
-                        <span class="catalog-tag">Infrastruktur</span>
-                    </div>
-                    <div class="catalog-body">
-                        <h3>Pengecoran Jalan Beton</h3>
-                        <ul class="catalog-spec">
-                            <li>📏 Minimal: 100 m²</li>
-                            <li>🧱 Mutu Beton: K-300 / K-350</li>
-                            <li>🚜 Termasuk Alat Berat & Tenaga Ahli</li>
-                        </ul>
-                        <div class="catalog-footer">
-                            <div class="price-label">Hubungi untuk Harga</div>
-                            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20pesan%20Pengecoran%20Jalan%20Beton,%20bisa%20minta%20penawaran%20harganya?" class="btn-nego" target="_blank">Nego Harga 💬</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item Katalog 6 -->
-                <div class="catalog-card" data-category="rumah">
-                    <div class="catalog-image">
-                        <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/11/17/d1f6adc3-310f-4ab2-9b55-a0e6a9386251.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg" alt="Sumur Bor Rumahan">
-                        <span class="catalog-tag">Rumah</span>
-                    </div>
-                    <div class="catalog-body">
-                        <h3>Sumur Bor Rumahan</h3>
-                        <ul class="catalog-spec">
-                            <li>📏 Kedalaman: 20 - 40 Meter</li>
-                            <li>💧 Termasuk Pipa & Pompa Jet Pump</li>
-                            <li>🛠️ Garansi Pengerjaan 1 Bulan</li>
-                        </ul>
-                        <div class="catalog-footer">
-                            <div class="price-label">Hubungi untuk Harga</div>
-                            <a href="https://wa.me/6282160681229?text=Halo,%20saya%20tertarik%20pesan%20Sumur%20Bor%20Rumahan,%20bisa%20minta%20penawaran%20harganya?" class="btn-nego" target="_blank">Nego Harga 💬</a>
-                        </div>
-                    </div>
-                </div>
-
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="katalog.html" style="display: inline-block; border: 2px solid var(--primary-blue); color: var(--primary-blue); padding: 12px 30px; font-weight: bold; border-radius: 5px; text-decoration: none;">Lihat Semua Katalog &rarr;</a>
             </div>
         </div>
     </section>
@@ -1146,31 +871,6 @@
             if (!isActive) element.classList.add('active');
         }
     </script>
-            // Filter Katalog Proyek
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const catalogCards = document.querySelectorAll('.catalog-card');
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Hapus kelas 'active' dari semua tombol
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Tambah kelas 'active' ke tombol yang diklik
-                    this.classList.add('active');
-
-                    const filterValue = this.getAttribute('data-filter');
-
-                    catalogCards.forEach(card => {
-                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                            card.style.display = 'flex';
-                            // Animasi fade in
-                            card.style.animation = 'fadeIn 0.5s ease';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
 </body>
 </html>
