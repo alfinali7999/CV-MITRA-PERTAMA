@@ -731,8 +731,9 @@
 
     <section style="padding: 50px 0; background-color: var(--bg-light);">
         <div class="container">
+            
             <!-- Tombol Filter -->
-            <div class="catalog-filter">
+            <div class="catalog-filter" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px;">
                 <button class="filter-btn active" data-filter="all">Semua</button>
                 <button class="filter-btn" data-filter="rumah">Rumah</button>
                 <button class="filter-btn" data-filter="komersial">Komersial</button>
@@ -742,15 +743,19 @@
 
             <!-- Wadah Kosong -->
             <div class="catalog-grid" id="wadah-produk-home">
-                <!-- JANGAN TULIS APA PUN DI SINI -->
+                <!-- Nanti diisi otomatis -->
             </div>
 
             <!-- Tombol Lihat Semua -->
             <div style="text-align: center; margin-top: 40px;">
-                <a href="https://cvmitrapertama.vercel.app/katalog.html" style="display: inline-block; border: 2px solid var(--primary-blue); color: var(--primary-blue); padding: 12px 30px; font-weight: bold; border-radius: 5px; text-decoration: none;">Lihat Semua Katalog &rarr;</a>
+                <a href="katalog.html" style="display: inline-block; border: 2px solid var(--primary-blue); color: var(--primary-blue); padding: 12px 30px; font-weight: bold; border-radius: 5px; text-decoration: none;">Lihat Semua Katalog &rarr;</a>
             </div>
+
         </div>
     </section>
+
+    <!-- IFrame Tersembunyi -->
+    <iframe id="iframe-sumber-produk" src="data-produk.html" style="display: none;"></iframe>
 
     <!-- data-produk.html -->
 
@@ -953,6 +958,56 @@
             allItems.forEach(item => item.classList.remove('active'));
             if (!isActive) element.classList.add('active');
         }
+    </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.getElementById('iframe-sumber-produk');
+            const wadah = document.getElementById('wadah-produk-home');
+
+            iframe.onload = function() {
+                try {
+                    // Ambil HTML dari data-produk.html
+                    let isiHTML = iframe.contentWindow.document.body.innerHTML;
+                    wadah.innerHTML = isiHTML;
+
+                    const cards = wadah.querySelectorAll('.catalog-card');
+                    
+                    // BATASI HANYA 9 PRODUK YANG TAMPIL DI HOME PAGE
+                    cards.forEach((card, index) => {
+                        if (index >= 9) {
+                            card.style.display = 'none';
+                            card.setAttribute('data-sembunyi', 'true');
+                        }
+                    });
+
+                    // Logika Filter
+                    const filterBtns = document.querySelectorAll('.filter-btn');
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            filterBtns.forEach(b => b.classList.remove('active'));
+                            this.classList.add('active');
+                            
+                            const filterValue = this.getAttribute('data-filter');
+                            let counter = 0; // Hitung produk yang muncul
+                            
+                            cards.forEach(card => {
+                                // Cek apakah produk sesuai kategori dan belum lebih dari 9
+                                if ((filterValue === 'all' || card.getAttribute('data-category') === filterValue) && counter < 9) {
+                                    card.style.display = 'flex';
+                                    counter++;
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+
+                } catch (error) {
+                    console.error("Gagal menyalin produk: ", error);
+                }
+            };
+        });
     </script>
 
 </body>
